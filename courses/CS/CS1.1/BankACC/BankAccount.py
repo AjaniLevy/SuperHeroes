@@ -17,7 +17,7 @@ class BankAccount:
             self.balance -= 10
         self.balance -= amount
     def get_balance(self):
-        print("Welcome to the Bank of Makeschool")
+        print("Welcome to the Bank of Makeschool \n")
         return (F"{self.balance} is your balance")
     def add_interest(self):
         interest = self.balance*.00083
@@ -27,8 +27,22 @@ class BankAccount:
         print(F""""                   {self.name} 
                     Account No.:****{ACCTN[4:]} 
                     Routing No.:{self.routing_number} 
-                    Balance: {self.balance}""")
+                    Balance: {self.balance} \n"""
+                    )
 
 AJ = BankAccount("Ajani Levy")
-AJ.deposit(5000)
+AJ.deposit(50)
 AJ.print_receipt()
+MJ = BankAccount("Micheal Jordan")
+MJ.deposit(90000000)
+MJ.get_balance()
+MJ.print_receipt()
+KW = BankAccount("Kanye West")
+KW.deposit(40000000)
+KW.add_interest()
+KW.add_interest()
+KW.add_interest()
+KW.add_interest()
+KW.add_interest()
+KW.add_interest()
+KW.print_receipt()
