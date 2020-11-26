@@ -24,7 +24,7 @@ class BankAccount:
         self.balance += interest
     def print_receipt(self):
         ACCTN = str(self._BankAccount__ACCN)
-        print(F""""                   {self.name} 
+        print(F"""                  {self.name} 
                     Account No.:****{ACCTN[4:]} 
                     Routing No.:{self.routing_number} 
                     Balance: {self.balance} \n"""
@@ -35,7 +35,8 @@ AJ.deposit(50)
 AJ.print_receipt()
 MJ = BankAccount("Micheal Jordan")
 MJ.deposit(90000000)
-MJ.get_balance()
+MJB = MJ.get_balance()
+print(MJB)
 MJ.print_receipt()
 KW = BankAccount("Kanye West")
 KW.deposit(40000000)
@@ -46,3 +47,4 @@ KW.add_interest()
 KW.add_interest()
 KW.add_interest()
 KW.print_receipt()
+AJ.print_receipt()
